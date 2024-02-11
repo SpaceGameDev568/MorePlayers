@@ -3,14 +3,14 @@
 	"Version": 1,
 	"VersionName": "1.0.0",
 	"SemVersion": "1.0.0",
-	"FriendlyName": "MorePlayers",
-	"Description": "",
+	"FriendlyName": "More Players",
+	"Description": "Allows you to have more than just 4 people in your game.",
 	"Category": "Modding",
 	"CreatedBy": "SpaceGameDev",
-	"CreatedByURL": "",
-	"DocsURL": "",
+	"CreatedByURL": "https://spacegamedev.com",
+	"DocsURL": "https://docs.spacegamedev.com/more-players",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "https://github.com/SpaceGameDev568/MorePlayers/issues/new/choose",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
@@ -26,7 +26,7 @@
 		{
 			"Name": "SML",
 			"Enabled": true,
-			"SemVersion": "^3.6.1",
+			"SemVersion": "^3.7.0",
 			"BasePlugin": false
 		}
 	]
