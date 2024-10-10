@@ -19,7 +19,7 @@
 		{
 			"Name": "SML",
 			"Enabled": true,
-			"SemVersion": "^3.8.0-dev",
+			"SemVersion": "^3.8.0",
 			"BasePlugin": false
 		},
 		{
