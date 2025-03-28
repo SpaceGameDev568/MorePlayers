@@ -26,6 +26,9 @@ public class MorePlayers : ModuleRules
 			new string[]
 			{
 				"Core",
+				"SML",
+				"Engine",
+				"FactoryGame",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
