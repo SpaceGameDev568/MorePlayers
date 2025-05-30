@@ -19,9 +19,11 @@ void UMorePlayersGameWorldModule::Init()
 	#endif
 	}
 
-	int32 ModdedMaxPlayers = ModConfig.ModdedMaxPlayers;
+	const int32 ModdedMaxPlayers = ModConfig.ModdedMaxPlayers;
 
 	#if WITH_SERVER_CODE // Server-side code
+
+	if(this->GetWorld()->GetNetMode() != NM_DedicatedServer){
 
 		//UCLASS(notplaceable)
 		//class FACTORYGAME_API AFGAdminInterface : public AInfo
@@ -33,9 +35,19 @@ void UMorePlayersGameWorldModule::Init()
 		// IF THIS ERRORS IN NEWER VERSIONS, ADD 'friend class UMorePlayersGameWorldModule;' TO THE AREA ABOVE ON FGAdminInterface.h
 
 		AFGPlayerController* PlayerController = Cast<AFGPlayerController>(GetWorld()->GetFirstPlayerController());
-		PlayerController->GetAdminInterface()->GetGameSession()->MaxPlayers = ModdedMaxPlayers;
+		if (IsValid(PlayerController))
+		{
+			PlayerController->GetAdminInterface()->GetGameSession()->MaxPlayers = ModdedMaxPlayers;
 
-		UE_LOG(LogMorePlayers, Verbose, TEXT("Max Players Registered: %d"), PlayerController->GetAdminInterface()->GetGameSession()->MaxPlayers);
+			UE_LOG(LogMorePlayers, Verbose, TEXT("Max Players Registered: %d"), PlayerController->GetAdminInterface()->GetGameSession()->MaxPlayers);
+		}
+		else
+		{
+			UE_LOG(LogMorePlayers, Verbose, TEXT("Player Controller not valid"));
+		}
+
+
+	}
 
 	#endif // Client-side code
 }
