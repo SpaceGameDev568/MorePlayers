@@ -19,19 +19,14 @@
 		{
 			"Name": "MorePlayers",
 			"Type": "Runtime",
-			"LoadingPhase": "PreDefault",
-			"PlatformAllowList": [
-				"Win64",
-				"Mac",
-				"Linux"
-			]
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
 		{
 			"Name": "SML",
 			"Enabled": true,
-			"SemVersion": "^3.11.0"
+			"SemVersion": "^3.11.3"
 		},
 		{
 			"Name": "ModUpdateNotifier",
@@ -39,6 +34,6 @@
 			"SemVersion": "^2.4.0"
 		}
 	],
-	"GameVersion": ">=410840",
+	"GameVersion": ">=455399",
 	"RequiredOnRemote": false
 }
