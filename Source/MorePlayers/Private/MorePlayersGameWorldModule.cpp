@@ -25,15 +25,6 @@ void UMorePlayersGameWorldModule::Init()
 
 	if(this->GetWorld()->GetNetMode() != NM_DedicatedServer){
 
-		//UCLASS(notplaceable)
-		//class FACTORYGAME_API AFGAdminInterface : public AInfo
-		//{
-		//	GENERATED_BODY()
-		//
-		//	friend class UMorePlayersGameWorldModule;
-
-		// IF THIS ERRORS IN NEWER VERSIONS, ADD 'friend class UMorePlayersGameWorldModule;' TO THE AREA ABOVE ON FGAdminInterface.h
-
 		AFGPlayerController* PlayerController = Cast<AFGPlayerController>(GetWorld()->GetFirstPlayerController());
 		if (IsValid(PlayerController))
 		{
@@ -45,7 +36,6 @@ void UMorePlayersGameWorldModule::Init()
 		{
 			UE_LOG(LogMorePlayers, Verbose, TEXT("Player Controller not valid"));
 		}
-
 
 	}
 
