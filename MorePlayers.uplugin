@@ -1,8 +1,8 @@
 {
 	"FileVersion": 3,
 	"Version": 2,
-	"VersionName": "2.2.0",
-	"SemVersion": "2.2.0",
+	"VersionName": "2.3.0",
+	"SemVersion": "2.3.0",
 	"FriendlyName": "More Players",
 	"Description": "Allows you to have more than just 4 people in your game.",
 	"Category": "Modding",
@@ -26,14 +26,9 @@
 		{
 			"Name": "SML",
 			"Enabled": true,
-			"SemVersion": "^3.11.3"
-		},
-		{
-			"Name": "ModUpdateNotifier",
-			"Enabled": true,
-			"SemVersion": "^2.4.0"
+			"SemVersion": "^3.12.0"
 		}
 	],
-	"GameVersion": ">=455399",
+	"GameVersion": ">=491125",
 	"RequiredOnRemote": false
 }
